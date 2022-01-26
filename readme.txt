@@ -1,4 +1,4 @@
-=== WP All Import - WordLift Add-On ===
+=== Import into Schema.org by WordLift ===
 Contributors: ziodave
 Tags: wordlift, wp all import, search engine optimization, seo, import seo, csv
 Requires at least: 4.3
@@ -29,7 +29,7 @@ To install the WordLift Add-On, either:
 
 * Upload the plugin from the Plugins page in WordPress
 
-* Unzip wp-all-import-wordlift-add-on.zip and upload the contents to /wp-content/plugins/, and then activate the plugin from the Plugins page in WordPress
+* Unzip all-import-wordlift-add-on.zip and upload the contents to /wp-content/plugins/, and then activate the plugin from the Plugins page in WordPress
 
 The Yoast WordLift Add-On will appear in the Step 3 of WP All Import.
 
