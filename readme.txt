@@ -2,8 +2,8 @@
 Contributors: ziodave
 Tags: wordlift, wp all import, search engine optimization, seo, import seo, csv
 Requires at least: 4.3
-Tested up to: 5.9
-Stable tag: 1.0.0
+Tested up to: 6.3
+Stable tag: 1.0.1
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -34,6 +34,9 @@ To install the WordLift Add-On, either:
 The Yoast WordLift Add-On will appear in the Step 3 of WP All Import.
 
 == Changelog ==
+
+= 1.0.1 =
+* Replace spaces in Relative URIs with underscores.
 
 = 1.0.0 =
 * Initial release supporting the Relative Item Id field.
