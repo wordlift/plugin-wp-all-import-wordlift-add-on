@@ -3,7 +3,7 @@
  * Plugin Name:         WordLift Add-On for WP All Import
  * Plugin URI:          https://wordlift.io
  * Description:         Import data into WordLift with WP All Import.
- * Version:             1.0.0
+ * Version:             1.0.1
  * Requires at least:   4.3
  * Requires PHP:        5.3
  * Author:              WordLift
@@ -90,11 +90,13 @@ function __wpai_wl_addon__notice() {
 function __wpai_wl_addon__import( $post_id, $data, $options ) {
 
 	try {
+        // Replace spaces with underscores. Spaces will cause the entity not to sync to the remote KG.
+		$rel_uri         = str_replace( ' ', '_', $data['entity__rel_uri'] );
 		$content_service = Wordpress_Content_Service::get_instance();
 		$content_id      = Wordpress_Content_Id::create_post( $post_id );
-		$content_service->set_entity_id( $content_id, $data['entity__rel_uri'] );
+		$content_service->set_entity_id( $content_id, $rel_uri );
 	} catch ( Exception $e ) {
-		__wpai_wl_addon__logger( "An error occurred while importing {$data['entity__rel_uri']} to $post_id: {$e->getMessage()}" );
+		__wpai_wl_addon__logger( "An error occurred while importing {$rel_uri} to $post_id: {$e->getMessage()}" );
 	}
 
 }
